@@ -57,5 +57,5 @@ function setResetButtonBehavior(table) {
 }
 
 document.getElementById("home-button").addEventListener("click", function () {
-  window.location.href = "/game-collection/homepage/index.html";
+  window.location.href = "/game-collection/index.html";
 });

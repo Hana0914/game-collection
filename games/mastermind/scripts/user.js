@@ -12,7 +12,7 @@ export function modalHandlers() {
   });
 
   confirmButton.addEventListener("click", () => {
-    window.location.href = "/game-collection/homepage/index.html";
+    window.location.href = "/game-collection/index.html";
   });
 
   cancelButton.addEventListener("click", () => {

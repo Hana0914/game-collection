@@ -29,5 +29,5 @@ document.getElementById("reset-button").addEventListener("click", () => {
 });
 
 document.getElementById("home-button").addEventListener("click", () => {
-  window.location.href = "/game-collection/homepage/index.html";
+  window.location.href = "/game-collection/index.html";
 });
