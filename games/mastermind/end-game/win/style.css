@@ -1,0 +1,28 @@
+canvas {
+  display: block;
+  margin: auto;
+  border: 1px solid black;
+}
+
+#message {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: black;
+  padding: 10px;
+  margin-left: 35%;
+}
+
+a,
+p {
+  color: red;
+}
+
+p {
+  font-size: 6em;
+}
+
+a {
+  font-size: 3em;
+  text-decoration: none;
+}

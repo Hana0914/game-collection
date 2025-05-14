@@ -1,0 +1,138 @@
+/* body remains as is */
+
+#cont {
+  text-align: center;
+  background-color: rgba(242, 209, 187, 0.85);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  width: 90vw;
+  height: 90vh;
+  max-width: 1300px;
+  max-height: 650px;
+}
+
+table {
+  border: 2px solid #4a4a4a;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+td {
+  width: 5%;
+  height: 5%;
+  border: 1px solid #333;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease, box-shadow 0.3s ease-in-out;
+}
+
+td:hover {
+  transform: scale(1.1);
+  background-color: rgba(200, 200, 200, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* צללה עדינה סביב התא */
+}
+
+/* אנימציה בעת צביעה */
+td.colored {
+  animation: colorChange 0.5s ease-in-out;
+}
+
+@keyframes colorChange {
+  0% {
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: rgba(235, 98, 98, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgba(235, 98, 98, 1);
+  }
+}
+
+/* Buttons and Inputs */
+button,
+input {
+  display: inline-block;
+  background-color: #ebf688;
+  color: rgb(235, 98, 98);
+  border-radius: 50%;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  width: 80px;
+  height: 40px;
+}
+
+button:hover,
+input:hover {
+  background-color: #acde14;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+button {
+  font-size: 25px;
+  border: none;
+}
+
+label {
+  font-size: 20px;
+  background-color: rgba(235, 246, 136, 0.9);
+}
+
+/* Text styling */
+h1,
+p {
+  color: #ebf22b;
+  background-image: linear-gradient(to right, #5684a9, #28cd72);
+  margin: auto;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 55px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+/* Home button styling */
+#home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #28cd72;
+  color: white;
+  border-radius: 15px;
+  font-size: 18px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#home-button:hover {
+  background-color: #3a9f5f;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}

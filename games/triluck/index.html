@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="hebrew" />
+    <meta
+      name="description"
+      content="משחק מכונת מזל שבו תוכל לנחש 3 מספרים ולקבל נקודות לפי התאמה."
+    />
+    <link rel="icon" href="/favicon.ico.ico" type="image/x-icon" />
+    <title>בול לטעמי - משחק מכונת המזל</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <h1>ברוכים הבאים ל"קלעת בול"!</h1>
+    <p>
+      כאן תוכלו לשחק במכונת המזל ולצבור נקודות. <br />
+      בכל לחיצה על כפתור "נסו מזלכם" יוגרלו 3 מספרים בין 1 ל-9. <br />
+      ניקודכם יתעדכן על פי הערכים שהוגרלו.
+    </p>
+    <div class="rules">
+      שלושת המספרים שונים זה מזה <span class="score_rule">1-</span>
+    </div>
+    <div class="rules">
+      שניים מבין המספרים זהים זה לזה <span class="score_rule">1+</span>
+    </div>
+    <div class="rules">
+      שלושת המספרים זהים זה לזה <span class="score_rule">10+</span>
+    </div>
+    <div class="rules">
+      שלושת המספרים זהים ל-7 <span class="score_rule">50+</span>
+    </div>
+
+    <!-- שלושת הדיבים למספרים -->
+    <div class="results-container">
+      <div id="div1" class="div red">0</div>
+      <div id="div2" class="div green">0</div>
+      <div id="div3" class="div yellow">0</div>
+    </div>
+
+    <!-- מקום להציג את הניקוד -->
+    <div id="score-display"></div>
+
+    <!-- כפתורים -->
+    <div class="buttons-container">
+      <button id="try-luck-button">נסו מזלכם</button>
+      <button id="reset-button">איפוס</button>
+      <button id="home-button">לדף הבית</button>
+    </div>
+  </body>
+</html>

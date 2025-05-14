@@ -1,0 +1,113 @@
+#text {
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+  color: #2c3e50;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 40px auto;
+  width: 80%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#name,
+#guesses,
+#timer-display {
+  margin: 10px 0;
+  color: #1a237e;
+}
+
+.divs {
+  padding: 30px;
+  margin: 20px auto;
+  background-color: rgba(240, 240, 240, 0.85);
+  border: 3px solid #4a4a4a;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.guess {
+  width: 10%;
+  min-width: 60px;
+  height: 110px;
+  background-color: #ffffff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin: 0 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.result {
+  border-radius: 20%;
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.space {
+  background-color: transparent;
+  border: 2px dashed #bbb;
+}
+
+.parent-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #eef1f5, #d5d8dd);
+  border-radius: 20px;
+  margin: 20px auto;
+}
+
+#button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(243, 194, 244, 0.3);
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  gap: 10px;
+}
+
+.color-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #444;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.result-red {
+  background-color: red;
+}
+
+.result-black {
+  background-color: black;
+}

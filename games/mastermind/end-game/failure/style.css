@@ -1,0 +1,24 @@
+#game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: bold;
+  color: red;
+  opacity: 0;
+}
+
+#caption {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+}
+
+a {
+  text-decoration: none;
+}
