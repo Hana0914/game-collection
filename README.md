@@ -41,7 +41,7 @@ Make sure you have a modern browser to ensure compatibility with all features.
 1. **Open the Game**: After downloading and extracting the files, open `index.html` in your browser.
 2. **Choose a Game**: Select a game from the main menu.
 3. **Follow the Instructions**: Each game has its own set of rules and instructions. Read them carefully.
-4. **Enjoy!**: Have fun playing and feel free to explore the code to see how everything works.
+4. **Enjoy!**: Have fun playing, and feel free to explore the code to see how everything works.
 
 ## 🕹️ Games Included
 
