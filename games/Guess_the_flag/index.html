@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Flag</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #121212;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #00d4ff;
+      text-shadow: 1px 1px 8px rgba(0, 212, 255, 0.6);
+    }
+
+    .flag-container img {
+      width: 250px;
+      height: 150px;
+      border: 3px solid #00d4ff;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 320px;
+      margin: auto;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #1f1f1f;
+      color: #f5f5f5;
+      transition: 0.3s;
+      border: 1px solid #00d4ff;
+    }
+
+    button:hover {
+      background: #00d4ff;
+      color: #121212;
+      font-weight: bold;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .status {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .timer {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #ff4444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Guess the Flag!</h1>
+
+  <div class="flag-container">
+    <img id="flag" src="" alt="Flag">
+  </div>
+
+  <div class="options">
+    <button onclick="checkAnswer(this)"></button>
+    <button onclick="checkAnswer(this)"></button>
+    <button onclick="checkAnswer(this)"></button>
+    <button onclick="checkAnswer(this)"></button>
+  </div>
+
+  <p class="result" id="result"></p>
+  <p class="status" id="score">Score: 0</p>
+  <p class="status" id="level">Level: 1</p>
+  <p class="timer" id="timer">Time left: 10s</p>
+
+  <script>
+    const flags = [
+      { country: "India", img: "https://flagcdn.com/w320/in.png" },
+      { country: "United States", img: "https://flagcdn.com/w320/us.png" },
+      { country: "Japan", img: "https://flagcdn.com/w320/jp.png" },
+      { country: "Brazil", img: "https://flagcdn.com/w320/br.png" },
+      { country: "Germany", img: "https://flagcdn.com/w320/de.png" },
+      { country: "France", img: "https://flagcdn.com/w320/fr.png" },
+      { country: "United Kingdom", img: "https://flagcdn.com/w320/gb.png" },
+      { country: "Canada", img: "https://flagcdn.com/w320/ca.png" },
+      { country: "Italy", img: "https://flagcdn.com/w320/it.png" },
+      { country: "Australia", img: "https://flagcdn.com/w320/au.png" },
+      { country: "Argentina", img: "https://flagcdn.com/w320/ar.png" },
+      { country: "South Korea", img: "https://flagcdn.com/w320/kr.png" },
+      { country: "Russia", img: "https://flagcdn.com/w320/ru.png" },
+      { country: "Spain", img: "https://flagcdn.com/w320/es.png" },
+      { country: "Mexico", img: "https://flagcdn.com/w320/mx.png" },
+      { country: "China", img: "https://flagcdn.com/w320/cn.png" },
+      { country: "South Africa", img: "https://flagcdn.com/w320/za.png" },
+      { country: "Saudi Arabia", img: "https://flagcdn.com/w320/sa.png" },
+      { country: "Turkey", img: "https://flagcdn.com/w320/tr.png" },
+      { country: "Egypt", img: "https://flagcdn.com/w320/eg.png" },
+      { country: "Sweden", img: "https://flagcdn.com/w320/se.png" },
+      { country: "Norway", img: "https://flagcdn.com/w320/no.png" },
+      { country: "Netherlands", img: "https://flagcdn.com/w320/nl.png" },
+      { country: "Switzerland", img: "https://flagcdn.com/w320/ch.png" },
+      { country: "Portugal", img: "https://flagcdn.com/w320/pt.png" },
+      { country: "Greece", img: "https://flagcdn.com/w320/gr.png" },
+      { country: "Thailand", img: "https://flagcdn.com/w320/th.png" },
+      { country: "New Zealand", img: "https://flagcdn.com/w320/nz.png" },
+      { country: "Pakistan", img: "https://flagcdn.com/w320/pk.png" },
+      { country: "Indonesia", img: "https://flagcdn.com/w320/id.png" }
+    ];
+
+    let currentFlag;
+    let score = 0;
+    let level = 1;
+    const timeLimit = 10;
+    let timer;
+    let timeLeft;
+
+    function loadFlag() {
+      clearInterval(timer);
+
+      
+      const randomFlag = flags[Math.floor(Math.random() * flags.length)];
+      currentFlag = randomFlag;
+      document.getElementById("flag").src = randomFlag.img;
+
+      
+      let options = [randomFlag.country];
+      while (options.length < 4) {
+        let randomOption = flags[Math.floor(Math.random() * flags.length)].country;
+        if (!options.includes(randomOption)) {
+          options.push(randomOption);
+        }
+      }
+      options.sort(() => Math.random() - 0.5);
+
+      
+      document.querySelectorAll(".options button").forEach((btn, index) => {
+        btn.textContent = options[index];
+        btn.disabled = false;
+      });
+
+      document.getElementById("result").textContent = "";
+
+      timeLeft = timeLimit;
+      document.getElementById("timer").textContent = `Time left: ${timeLeft}s`;
+
+      timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").textContent = `Time left: ${timeLeft}s`;
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          document.getElementById("result").textContent = ` Time's up! It was ${currentFlag.country}`;
+          score = Math.max(0, score - 1);
+          updateStatus();
+          setTimeout(loadFlag, 1500);
+        }
+      }, 1000);
+    }
+
+    function checkAnswer(button) {
+      clearInterval(timer);
+      document.querySelectorAll(".options button").forEach(btn => btn.disabled = true);
+
+      if (button.textContent === currentFlag.country) {
+        document.getElementById("result").textContent = "You are Correct!";
+        score++;
+      } else {
+        document.getElementById("result").textContent = ` Wrong! It was ${currentFlag.country}`;
+        score = Math.max(0, score - 1);
+      }
+
+      updateStatus();
+      setTimeout(loadFlag, 1500);
+    }
+
+    function updateStatus() {
+      document.getElementById("score").textContent = "Score: " + score;
+      level = Math.floor(score / 5) + 1;
+      document.getElementById("level").textContent = "Level: " + level;
+    }
+
+    loadFlag();
+  </script>
+
+</body>
+</html>
