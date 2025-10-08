@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guess the Number</title>
-<link rel="stylesheet" href="style.css">
-<script src="guessnumber.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="guessnumberlogic.js" defer></script>
 </head>
 <body>
 
-<div class="game-card" id="gameCard">
-  <h1>Guess the Number!</h1>
-  <p>I'm thinking of a number between 1 and 100.</p>
+  <div class="game-card" id="gameCard">
+    <h1>Guess the Number!</h1>
+    <p>I'm thinking of a number between 1 and 100.</p>
 
-  <input type="number" id="guessInput" placeholder="Enter your guess">
-  <br>
-  <button class="guess-btn" onclick="checkguess()">Guess</button>
-  <button class="restart-btn" onclick="restartGame()">Restart</button>
+    <input type="number" id="guessInput" placeholder="Enter your guess">
+    <br>
+    <button class="guess-btn" onclick="checkguess()">Guess</button>
+    <button class="restart-btn" onclick="restartGame()">Restart</button>
 
-  <div class="message" id="message"></div>
-  <div class="attempts" id="attempts"></div>
-</div>
+    <div class="message" id="message"></div>
+    <div class="attempts" id="attempts"></div>
+  </div>
+
 </body>
 </html>

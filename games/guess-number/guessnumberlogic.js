@@ -2,7 +2,7 @@ let secretNumber;
 let tries;
 
 function startGame() {
-  secretNumber = 98;
+  secretNumber = Math.floor(Math.random() * 100) + 1;
   tries = 0;
   document.getElementById('message').textContent = '';
   document.getElementById('attempts').textContent = '';
@@ -16,15 +16,18 @@ function checkguess() {
     document.getElementById('message').textContent = 'Enter a number between 1 and 100!';
     return;
   }
+  else if(!Number.isInteger(guess)) {
+    document.getElementById('message').textContent = 'Enter a valid number!';
+    return;
+  }
   tries++;
   const diff = Math.abs(secretNumber - guess);
+  averageTries = (averageTries + tries) / 2;
+  document.getElementById('average').textContent = `Average tries: ${averageTries.toFixed(2)}`;
 
   if (guess === secretNumber) {
     document.getElementById('message').textContent = `🎉 Correct! The number was ${secretNumber}.`;
-    if(tries ==1)
-        document.getElementById('attempts').textContent = `You guessed it in ${tries} try.`;
-    else
-        document.getElementById('attempts').textContent = `You guessed it in ${tries} tries.`;
+    tries === 1 ? `You guessed it in ${tries} try.` : `You guessed it in ${tries} tries.`;
     document.getElementById('gameCard').classList.add('card-correct');
   } else if (guess < secretNumber) {
     if (diff > 10) {
