@@ -22,9 +22,7 @@ function checkguess() {
   }
   tries++;
   const diff = Math.abs(secretNumber - guess);
-  averageTries = (averageTries + tries) / 2;
-  document.getElementById('average').textContent = `Average tries: ${averageTries.toFixed(2)}`;
-
+  
   if (guess === secretNumber) {
     document.getElementById('message').textContent = `🎉 Correct! The number was ${secretNumber}.`;
     tries === 1 ? `You guessed it in ${tries} try.` : `You guessed it in ${tries} tries.`;
