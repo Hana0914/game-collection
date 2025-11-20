@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+  }
+
+  .game-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+
+  p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    outline: none;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  .guess-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+
+  .restart-btn {
+    background-color: #4ecdc4;
+    color: #fff;
+  }
+
+  .message, .attempts {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    min-height: 24px;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  .card-correct {
+    box-shadow: 0 0 20px #4ecdc4;
+    transform: scale(1.05);
+  }
