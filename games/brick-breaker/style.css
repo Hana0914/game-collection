@@ -1,0 +1,104 @@
+* {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Press Start 2P', cursive;
+            color: #e0e0e0;
+        }
+
+        .game-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #16213e;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #00ffff;
+            text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            background: #0f3460;
+            display: block;
+            border-radius: 10px;
+            border: 3px solid #00ffff;
+            box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.3);
+            max-width: 100%;
+            height: auto;
+        }
+
+        .info-panel {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 10px;
+            font-size: 16px;
+        }
+
+        .info-panel span {
+            color: #e94560;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        #startButton, #restartButton {
+            background-color: #e94560;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 5px 0 #c33149;
+            transition: all 0.1s ease-in-out;
+        }
+
+        #startButton:active, #restartButton:active {
+            transform: translateY(5px);
+            box-shadow: 0 2px 0 #c33149;
+        }
+        
+        #restartButton {
+            background-color: #53bf9d;
+            box-shadow: 0 5px 0 #419d7f;
+            display: none; /* Hidden by default */
+        }
+        
+        #restartButton:active {
+            transform: translateY(5px);
+            box-shadow: 0 2px 0 #419d7f;
+        }
+
+        #messageBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(22, 33, 62, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #00ffff;
+            text-align: center;
+            display: none; /* Hidden by default */
+            z-index: 10;
+        }
+
+        #messageBox h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #00ffff;
+        }
